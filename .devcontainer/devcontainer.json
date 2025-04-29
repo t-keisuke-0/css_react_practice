@@ -1,0 +1,56 @@
+{
+    "name": "React Project",
+    "build": {
+      "dockerfile": "Dockerfile",
+      "context": ".."
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "dbaeumer.vscode-eslint",
+          "bradlc.vscode-tailwindcss",
+          "formulahendry.auto-rename-tag",
+          "csstools.postcss",
+          "formulahendry.auto-close-tag",
+          "aaron-bond.better-comments",
+          "alefragnani.Bookmarks",
+          "streetsidesoftware.code-spell-checker",
+          "mhutchie.git-graph",
+          "oderwat.indent-rainbow",
+          "Zignd.html-css-class-completion",
+          "xabikos.JavaScriptSnippets",
+          "ms-vscode.live-server",
+          "glenn2223.live-sass",
+          "christian-kohler.path-intellisense",
+          "vscode-icons-team.vscode-icons",
+          "esbenp.prettier-vscode",
+          "VisualStudioExptTeam.vscodeintellicode",
+          "VisualStudioExptTeam.intellicode-api-usage-examples",
+          "ecmel.vscode-html-css"
+        ],
+        "settings": {
+          "eslint.enable": true,
+          "eslint.validate": [
+            "javascript",
+            "javascriptreact",
+            "typescript",
+            "typescriptreact"
+          ],
+          "eslint.run": "onType",
+          "editor.codeActionsOnSave": {
+            "source.fixAll": true
+          },
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "editor.formatOnSave": true
+        }
+      }
+    },
+    "remoteEnv": {
+      "CHOKIDAR_USEPOLLING": "true"
+    },
+    "forwardPorts": [3000],
+    "workspaceMount": "source=${localWorkspaceFolder},target=/playground,type=bind,consistency=delegated", // ホストOSのファイルシステムの変更を優先することでコンテナとの整合性を取る
+    "workspaceFolder": "/playground",
+    "remoteUser": "devuser"
+  }
+  

@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "esnext",
+    "jsx": "react-jsx",
+    "types": ["@emotion/react/types/css-prop"],
+    "esModuleInterop": true, // CommonJS モジュールとの相互運用性を向上
+    "forceConsistentCasingInFileNames": true,
+    "strict": true, // 厳格な型チェックを有効化
+    "skipLibCheck": true, // 型定義ファイルのチェックをスキップ (ビルド時間短縮)
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true, // 各ファイルを独立したモジュールとしてコンパイル (ES Modules の要件)
+    "noEmit": true // JavaScript ファイルの出力は webpack などに任せる
+  },
+  "include": ["./src"],
+  "exclude": ["node_modules"]
+}
